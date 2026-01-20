@@ -4,53 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My feedback Site{% endblock %}</title>
-    <style>
-        body {
-            font-family:  Arial, Helvetica, sans-serif;
-            padding: 20px;
-            background-color: #a2a8e6d8;
-        }
-        header, footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        main {
-            background: white;
-            margin-top: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-
-        }
-    </style>
+   
 </head>
 <body>
 <header>
-    <h1>Feedback Page</h1>
+    <h1>welcome to my Site</h1>
 
     <nav>
         <a href="/feedback">Feedback</a>
     </nav>
 </header>
 
-<main>
-    {% block content %}
-    {% endblock %}
-</main>
+{% with messages = get_flashed_messages()%}
+{%if messages %}
+<ul style="color:green;">
+    {%for msg in messages %}
+    <li>{{msg}}</li>
+    {{%endfor%}}
+</ul>
+{%endif%}
+{%endwith%}
 
-<footer>
-    <p>
-        &copy; 2026 My Feedback Site
-    </p>
-</footer>
+ 
+
+    {% block content %}
+    
+    
+    {% endblock %}
 
     
 </body>
