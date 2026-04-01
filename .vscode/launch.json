@@ -4,7 +4,20 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "overloading",
+            "request": "launch",
+            "mainClass": "opps_on_java.overloading",
+            "projectName": "JAVA_bea68be8"
+        },
+        {
+            "type": "java",
+            "name": "clsobj",
+            "request": "launch",
+            "mainClass": "opps_on_java.clsobj",
+            "projectName": "JAVA_bea68be8"
+        },
         {
             "type": "java",
             "name": "Current File",
